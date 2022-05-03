@@ -1,7 +1,5 @@
 import {useState } from 'react';
 import React from 'react';
-import noteContext from '../context/notes/noteContext';
-import { useNavigate } from "react-router-dom"
 import Loader from "./Loading"
 
 
