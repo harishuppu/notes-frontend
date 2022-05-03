@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import noteContext from "../context/notes/noteContext";
 import Noteitem from "./Noteitem";
 import Notesadd from "./Notesadd";
@@ -18,6 +18,7 @@ function Notes(props) {
     const getNotes= async () =>{
       //api call
       setlload(true);
+      //eslint-disable-next-line
       const response = await fetch(`${host}/api/notes/fetchallnotes/`, {
         method: 'GET', 
         headers: {

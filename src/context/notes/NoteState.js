@@ -51,6 +51,7 @@ const NoteState = (props) =>{
       // edit note
       const editNote = async (id,title,description,tag) =>{
         //api call
+        //eslint-disable-next-line
         const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
           method: 'PUT',
           
@@ -74,9 +75,6 @@ const NoteState = (props) =>{
           }
           setNotes(newNotes)
       }
-
-
-
       const [notes, setNotes] = useState(notesInitial)
     return(
         <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote , setNotes}}>
