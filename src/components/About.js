@@ -8,7 +8,7 @@ function About() {
      <h1>About NotesOnline</h1>
      </div>
       <div className="body my-2" >
-        <div className="aboutbdy" style={{height:"30vh"}}>
+        <div className="aboutbdy" style={{}}>
         <div className="card" style={{width:"75vw"}}>
           <div className="card-body my-2">NotesOnline is a digital notebook that helps you study and a website where you can save your writings and thoughts in cloud .
           This website is mainly made to save the notes in cloud and be able to access form anywhere in the world.
