@@ -14,26 +14,39 @@ function Notes(props) {
   useEffect(() => {
 
     
-    const host="https://arcane-ocean-89301.herokuapp.com/";
+    const host="https://notessaverharish.herokuapp.com";
     const getNotes= async () =>{
       //api call
-      setlload(true);
+      // get all Notes
+     
+
       //eslint-disable-next-line
-      const response = await fetch(`${host}/api/notes/fetchallnotes/`, {
-        method: 'GET', 
-        headers: {
-          'Content-Type': 'application/json',
-          "auth-token": localStorage.getItem('token')
-        }
-      });
+try {
+  setlload(true);
+  const response = await fetch(`${host}/api/notes/fetchallnotes/`, {
+    method: 'GET', 
+    headers: {
+      'Content-Type': 'application/json',
+      "auth-token": localStorage.getItem('token')
+    }
+  });
+  //logic
+  const json= await response.json()
+  console.log(json);
+  setNotes(json);
+  setlload(false);
+  console.log(lload);
+
+} catch (e) {
+  setlload(false);
+  console.log(e)
+
+}
+
+    
 
 
-      //logic
-      const json= await response.json()
-      console.log(json);
-      setNotes(json);
-      setlload(false);
-      //console.log(lload);
+      
     }
 
     if (localStorage.getItem("token")) {

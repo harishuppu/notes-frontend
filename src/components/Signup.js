@@ -13,7 +13,7 @@ const Signup = () => {
         e.preventDefault();
         setlod(true);
         const  {name, email, password } = cred;
-        const response = await fetch("https://arcane-ocean-89301.herokuapp.com/api/auth/createuser", {
+        const response = await fetch("https://notessaverharish.herokuapp.com/api/auth/createuser", {
           
             method: 'POST', 
             headers: {

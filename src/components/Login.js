@@ -11,7 +11,7 @@ const Login = () => {
     const handleSubmit= async (e)=>{
         e.preventDefault();
           setlod(true);
-        const response = await fetch("https://arcane-ocean-89301.herokuapp.com/api/auth/login", {
+        const response = await fetch("https://notessaverharish.herokuapp.com/api/auth/login", {
             method: 'POST', 
             headers: {
             'Content-Type': 'application/json',

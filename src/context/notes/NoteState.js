@@ -2,16 +2,18 @@ import NoteContext  from "./noteContext";
 import {useState} from 'react';
 const NoteState = (props) =>{
   
-  const host="https://arcane-ocean-89301.herokuapp.com/";
+  const host="https://notessaverharish.herokuapp.com";
     const notesInitial=[];
 
 
-        // get all Notes
+        
         
 
       // add Note
       const addNote = async (title,description,tag) =>{
         //api call
+        try {
+          
         const response = await fetch(`${host}/api/notes/addnote`, {
           method: 'POST',
          
@@ -27,6 +29,10 @@ const NoteState = (props) =>{
         //logic
        
         
+        } catch (error) {
+          console.log("error")
+        }
+
       }
       // deletenote
 
